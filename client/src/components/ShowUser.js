@@ -10,6 +10,7 @@ class ShowUser extends Component {
         this.state = {
             user: {}
         }
+
     }
 
     componentDidMount() {

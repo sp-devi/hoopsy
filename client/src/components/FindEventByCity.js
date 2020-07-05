@@ -3,26 +3,39 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 class FindEventByCity extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
 
         this.state = {
             event: {}
         }
+        console.log('constructor');
     }
 
-    componentDidMount() {
+    onChange = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
+
+    onSubmit = e => {
+        e.preventDefault();
+        console.log("submit seach");
+        const data = {
+            event: e.value
+        };
         axios
-            .get('http://localhost:8082/api/user')
+            .post('http://localhost:8082/api/city', data)
             .then(res => {
                 this.setState({
                     event: res.data
-                })
+                });
+                this.props.history.push('/');
             })
             .catch(err => {
                 console.log('Error showing User');
-            })
-    };
+            });
+    }
 
     render() {
         const event = this.state.event;
@@ -49,7 +62,7 @@ class FindEventByCity extends Component {
                         <br />
                         <div className='form-group'>
                             <input
-                                type='button'
+                                type='submit'
                                 value="Search"
                             />
                         </div>
@@ -62,4 +75,3 @@ class FindEventByCity extends Component {
 };
 
 export default FindEventByCity;
-
