@@ -31,9 +31,12 @@ class ShowUser extends Component {
 
         return (
             <div>
+                <div>
+                    User Profile
+                </div>
                 <h2>{user.name}</h2>
             </div>
-        )
+        );
 
     };
 };
