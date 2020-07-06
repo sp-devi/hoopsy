@@ -16,7 +16,8 @@ app.use(express.json({
     extended: false
 }));
 
-app.get('/', (req, res) => res.send('Hello World'));1
+var event = require('./routes/api/event.js');
+app.use('/api/event', event);
 
 const port = process.env.PORT || 8082;
 

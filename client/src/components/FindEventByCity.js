@@ -25,14 +25,15 @@ class FindEventByCity extends Component {
             event: e.value
         };
         axios
-            .post('http://localhost:8082/api/city', data)
+            .get('http://localhost:8082/api/event/')
             .then(res => {
                 this.setState({
                     event: res.data
                 });
-                this.props.history.push('/');
+                // this.props.history.push('/');
             })
             .catch(err => {
+                console.log(err);
                 console.log('Error showing User');
             });
     }
