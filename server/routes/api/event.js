@@ -8,7 +8,7 @@ const Event = require('../../models/Event');
 
 router.get('/id', function (req, res) {
     Event.find()
-        .then(books => res.json(books))
+        .then(events => res.json(events))
         .catch(err => res.status(404).json({
             noEventsFound: "no events"
         }));

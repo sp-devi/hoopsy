@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     User.findById(req.params.id)
-        .then(book => res.json(book))
+        .then(user => res.json(user))
         .catch(err => res.status(400).json({
             noUsersFound: 'No User'
         }))
