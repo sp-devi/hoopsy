@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+// Find Events based on input city
 class FindEventByCity extends Component {
     constructor() {
         super();
