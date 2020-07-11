@@ -21,12 +21,12 @@ class FindEventByCity extends Component {
 
     onSubmit = e => {
         e.preventDefault();
-        console.log("submit seach");
+        console.log("submit search");
         const data = {
             event: e.value
         };
         axios
-            .get('http://localhost:8082/api/event/')
+            .get('http://localhost:8082/api/sportEvent/' + 'a')
             .then(res => {
                 this.setState({
                     event: res.data
@@ -34,8 +34,7 @@ class FindEventByCity extends Component {
                 // this.props.history.push('/');
             })
             .catch(err => {
-                console.log(err);
-                console.log('Error showing User');
+                console.log('Error showing Events');
             });
     }
 
@@ -73,6 +72,9 @@ class FindEventByCity extends Component {
                                 value="Search"
                             />
                         </div>
+                        <Link to="/show-events">
+                            show
+                        </Link>
                     </div>
                 </form>
             </div >

@@ -17,8 +17,8 @@ app.use(express.json({
 }));
 
 // Event(BBall events)
-var event = require('./routes/api/event.js');
-app.use('/api/event', event);
+var sportEvent = require('./routes/api/sportEvent.js');
+app.use('/api/sportEvent', sportEvent);
 
 // Port(Leave 8082 for now)
 const port = process.env.PORT || 8082;
