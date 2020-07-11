@@ -4,16 +4,31 @@ import axios from 'axios';
 
 // Event lists
 class SportEventList extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
-            event: {}
+            sportEvents: []
         }
-        console.log('constructor');
+        console.log('showing all events');
+        console.log(props.history.location.state);
     }
 
+    componentDidMount() {
+        axios
+            .get('http://localhost:8082/api/sportEvent')
+            .then(res => {
+                this.setState({
+                    sportEvents: res.data
+                });
+            })
+            .catch(err => {
+                console.log('Error showing listed events');
+            })
+    };
+
     render() {
+        const events = this.state.sportEvents;
         return (
             <div className="container">
                 <div className="row justify-content-center">

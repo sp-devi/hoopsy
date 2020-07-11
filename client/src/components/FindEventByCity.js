@@ -8,7 +8,7 @@ class FindEventByCity extends Component {
         super();
 
         this.state = {
-            event: {}
+            city: ''
         }
         console.log('constructor');
     }
@@ -21,17 +21,19 @@ class FindEventByCity extends Component {
 
     onSubmit = e => {
         e.preventDefault();
-        console.log("submit search");
-        const data = {
-            event: e.value
-        };
+        console.log("submit search: ");
+
         axios
-            .get('http://localhost:8082/api/sportEvent/' + 'a')
+            .get('http://localhost:8082/api/sportEvent/' + this.state.city)
             .then(res => {
                 this.setState({
                     event: res.data
                 });
-                // this.props.history.push('/');
+                // this.props.history.push('/show-events', data);
+                this.props.history.push({
+                    pathname: '/show-events',
+                    state: { detail: 'city name' }
+                });
             })
             .catch(err => {
                 console.log('Error showing Events');
@@ -57,9 +59,9 @@ class FindEventByCity extends Component {
                             <input
                                 type='text'
                                 placeholder='Enter City'
-                                name='cityName'
+                                name='city'
                                 className='form-control'
-                                value={this.state.event.cityName}
+                                value={this.state.city}
                                 onChange={this.onChange}
                             />
                         </div>
