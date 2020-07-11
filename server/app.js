@@ -6,7 +6,7 @@ const app = express();
 
 connectDB();
 
-// cors
+// cors support
 app.use(cors({
     origin: true,
     credentials: true
@@ -16,6 +16,7 @@ app.use(express.json({
     extended: false
 }));
 
+// Event(BBall events)
 var event = require('./routes/api/event.js');
 app.use('/api/event', event);
 
