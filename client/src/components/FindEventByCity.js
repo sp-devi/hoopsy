@@ -45,12 +45,15 @@ class FindEventByCity extends Component {
 
         return (
             <div className="container">
-                <div className="row">
-                    <div className="col-md-8 m-auto">
+                <div className="row justify-content-center">
+                    <div className="col-md-4">
                         <br />
                         <p className="display-4 text-center">Hoopsy</p>
                     </div>
-                    <form noValidate onSubmit={this.onSubmit}>
+                </div>
+
+                <form noValidate onSubmit={this.onSubmit}>
+                    <div className="row justify-content-center">
                         <div className='form-group'>
                             <input
                                 type='text'
@@ -61,16 +64,18 @@ class FindEventByCity extends Component {
                                 onChange={this.onChange}
                             />
                         </div>
-                        <br />
+                    </div>
+                    <br />
+                    <div className="row justify-content-center">
                         <div className='form-group'>
                             <input
                                 type='submit'
                                 value="Search"
                             />
                         </div>
-                    </form>
-                </div>
-            </div>
+                    </div>
+                </form>
+            </div >
         );
 
     };
