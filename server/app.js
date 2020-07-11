@@ -20,6 +20,7 @@ app.use(express.json({
 var event = require('./routes/api/event.js');
 app.use('/api/event', event);
 
+// Port(Leave 8082 for now)
 const port = process.env.PORT || 8082;
 
 app.listen(port, () => console.log(`Server running on ${port}`));
