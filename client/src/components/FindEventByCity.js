@@ -29,10 +29,19 @@ class FindEventByCity extends Component {
                 this.setState({
                     event: res.data
                 });
-                // this.props.history.push('/show-events', data);
+                var resultData = [
+                    {
+                        city: 'Nagoya',
+                        eventName: 'International event'
+                    },
+                    {
+                        city: 'Okazaki',
+                        eventName: 'Yuki bbball'
+                    }
+                ]
                 this.props.history.push({
                     pathname: '/show-events',
-                    state: { detail: 'city name' }
+                    state: { detail: resultData }
                 });
             })
             .catch(err => {

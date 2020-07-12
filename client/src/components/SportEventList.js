@@ -8,24 +8,11 @@ class SportEventList extends Component {
         super(props);
 
         this.state = {
-            sportEvents: []
+            sportEvents: props.history.location.state
         }
         console.log('showing all events');
         console.log(props.history.location.state);
     }
-
-    componentDidMount() {
-        axios
-            .get('http://localhost:8082/api/sportEvent')
-            .then(res => {
-                this.setState({
-                    sportEvents: res.data
-                });
-            })
-            .catch(err => {
-                console.log('Error showing listed events');
-            })
-    };
 
     render() {
         const events = this.state.sportEvents;
@@ -33,7 +20,8 @@ class SportEventList extends Component {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-md-12 text-center">
-                        Event 1
+                       {events.detail[0].city}
+                       {events.detail[1].city}
                     </div>
                 </div>
             </div >
