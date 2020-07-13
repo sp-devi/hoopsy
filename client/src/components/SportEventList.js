@@ -17,17 +17,23 @@ class SportEventList extends Component {
 
     render() {
         const events = this.state.sportEvents;
-        const dat = {
-            city: 'nagoya',
-            eventName: 'ian event'
-        }
+        const dat = [{
+            cityName: 'nagoya',
+            eventName: 'ian event',
+            eventAddress: 'nakagawa lifelearning center'
+        }, {
+            cityName: 'nagoya',
+            eventName: 'taku event',
+            eventAddress: 'moriyama lifelearning center'
+        }]
+
+        let eventList = dat.map((event) =>
+            <SportEventItem sportEvent={event}></SportEventItem>
+        )
+
         return (
             <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-md-12 text-center">
-                       <SportEventItem sportEvent={dat}></SportEventItem>
-                    </div>
-                </div>
+                {eventList}
             </div >
         );
     }

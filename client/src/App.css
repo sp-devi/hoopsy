@@ -38,9 +38,9 @@
 }
 
 .event-container {
-  width: 250px;
+  width: 300px;
   border: 1px solid rgba(0,0,.125);
-  margin: 0 auto;
+  margin: 5px Auto;
   border-radius: 5px;
   overflow: hidden;
 }

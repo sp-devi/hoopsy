@@ -15,15 +15,17 @@ class SportEventItem extends Component {
     render() {
         return (
             <div className="row justify-content-center event-container">
-                <div className="col-md-4">
+                <div className="col-md-8">
                     <h4>
                         {this.state.event.eventName}
                     </h4>
+                    <h3>
+                        {this.state.event.eventAddress}
+                    </h3>
                     <p>
-                        {this.state.event.city}
+                        {this.state.event.cityName}
                     </p>
                 </div>
-
             </div>
         );
     };
