@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import SportEventItem from './SportEventItem';
 
 // Event lists
 class SportEventList extends Component {
@@ -16,12 +17,15 @@ class SportEventList extends Component {
 
     render() {
         const events = this.state.sportEvents;
+        const dat = {
+            city: 'nagoya',
+            eventName: 'ian event'
+        }
         return (
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-md-12 text-center">
-                       {events.detail[0].city}
-                       {events.detail[1].city}
+                       <SportEventItem sportEvent={dat}></SportEventItem>
                     </div>
                 </div>
             </div >
