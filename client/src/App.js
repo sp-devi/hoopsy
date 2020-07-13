@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import FindEventByCity from './components/FindEventByCity';
 import SportEventList from './components/SportEventList';
+import CreateSportEvent from './components/CreateSportEvent';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <div>
         <Route exact path='/' component={FindEventByCity} />
         <Route path='/show-events' component={SportEventList} />
+        <Route path='/create-event' component={CreateSportEvent} />
       </div>
     </Router>
   );

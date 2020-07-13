@@ -83,8 +83,10 @@ class FindEventByCity extends Component {
                                 value="Search"
                             />
                         </div>
-                        <Link to="/show-events">
-                            show
+                    </div>
+                    <div className="row justify-content-center">
+                        <Link to="/create-event">
+                            Create an event
                         </Link>
                     </div>
                 </form>
