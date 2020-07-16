@@ -25,10 +25,17 @@ class CreateSportEvent extends Component {
     render() {
         return (
             <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-md-6">
+                        <br />
+                        <p className="display-4">Create an event</p>
+                    </div>
+                </div>
+
                 <form noValidate onSubmit={this.onSubmit}>
                     <div className='form-group row justify-content-center'>
-                        <div className="col-xs-6">
-                            <label for="inputEmail4">Create an event</label>
+                        <div className="col-md-6">
+                            <label for="eventNameInput">Event Name</label>
                             <input
                                 type='text'
                                 placeholder='Event name'
@@ -40,7 +47,8 @@ class CreateSportEvent extends Component {
                         </div>
                     </div>
                     <div className='form-group row justify-content-center'>
-                        <div className="col-xs-6">
+                        <div className="col-md-6">
+                            <label for="eventAddressInput">Address</label>
                             <input
                                 type='text'
                                 placeholder='Address'
@@ -52,7 +60,7 @@ class CreateSportEvent extends Component {
                         </div>
                     </div>
                     <div className='form-group row justify-content-center'>
-                        <div className="col-xs-5">
+                        <div className="col-md-2">
                             <input
                                 type='text'
                                 placeholder='Start time'
@@ -62,10 +70,10 @@ class CreateSportEvent extends Component {
                                 onChange={this.onChange}
                             />
                         </div>
-                        <div className="col-xs-2">
+                        <div className="col-md-2">
                             <span className="text-center">~</span>
                         </div>
-                        <div className="col-xs-5">
+                        <div className="col-md-2">
                             <input
                                 type='text'
                                 placeholder='End time'
