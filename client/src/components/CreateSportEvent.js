@@ -11,11 +11,18 @@ class CreateSportEvent extends Component {
             cityName: '',
             eventName: '',
             eventAddress: '',
+            date: '',
             time: {
                 start: '',
                 end: ''
             }
         };
+    }
+
+    onChange = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
     }
 
     onSubmit = e => {
@@ -60,26 +67,27 @@ class CreateSportEvent extends Component {
                         </div>
                     </div>
                     <div className='form-group row justify-content-center'>
-                        <div className="col-md-2">
+                        <div className="col-md-6">
+                            <label for="eventDateInput">Date</label>
                             <input
-                                type='text'
-                                placeholder='Start time'
-                                name='eventAddress'
-                                className='form-control event-time'
-                                value={this.state.time.start}
+                                type='date'
+                                placeholder='Date'
+                                name='eventDate'
+                                className='form-control'
+                                value={this.state.date}
                                 onChange={this.onChange}
                             />
                         </div>
-                        <div className="col-md-2">
-                            <span className="text-center">~</span>
-                        </div>
-                        <div className="col-md-2">
+                    </div>
+                    <div className='form-group row justify-content-center'>
+                        <div className="col-md-6">
+                            <label for="eventDateInput">Start Time</label>
                             <input
-                                type='text'
-                                placeholder='End time'
-                                name='eventAddress'
-                                className='form-control event-time'
-                                value={this.state.time.end}
+                                type='time'
+                                placeholder='Date'
+                                name='eventTimeStart'
+                                className='form-control'
+                                value={this.state.time.start}
                                 onChange={this.onChange}
                             />
                         </div>
