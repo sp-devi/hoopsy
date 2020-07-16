@@ -25,10 +25,10 @@ class CreateSportEvent extends Component {
     render() {
         return (
             <div className="container">
-                Create an event
                 <form noValidate onSubmit={this.onSubmit}>
-                    <div className='form-group row'>
+                    <div className='form-group row justify-content-center'>
                         <div className="col-xs-6">
+                            <label for="inputEmail4">Create an event</label>
                             <input
                                 type='text'
                                 placeholder='Event name'
@@ -39,7 +39,7 @@ class CreateSportEvent extends Component {
                             />
                         </div>
                     </div>
-                    <div className='form-group row'>
+                    <div className='form-group row justify-content-center'>
                         <div className="col-xs-6">
                             <input
                                 type='text'
@@ -51,7 +51,7 @@ class CreateSportEvent extends Component {
                             />
                         </div>
                     </div>
-                    <div className='form-group row'>
+                    <div className='form-group row justify-content-center'>
                         <div className="col-xs-5">
                             <input
                                 type='text'
