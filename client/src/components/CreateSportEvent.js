@@ -92,6 +92,19 @@ class CreateSportEvent extends Component {
                             />
                         </div>
                     </div>
+                    <div className='form-group row justify-content-center'>
+                        <div className="col-md-6">
+                            <label for="eventDateInput">End Time</label>
+                            <input
+                                type='time'
+                                placeholder='Date'
+                                name='eventTimeEnd'
+                                className='form-control'
+                                value={this.state.time.end}
+                                onChange={this.onChange}
+                            />
+                        </div>
+                    </div>
                 </form>
             </div>
         )
