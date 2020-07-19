@@ -1,4 +1,4 @@
-# hoopsy
+# Hoopsy
 
 
 ![Hoopsy](https://github.com/sp-devi/hoopsy/blob/master/client/public/hoopsy.jpg)
