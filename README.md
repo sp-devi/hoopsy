@@ -5,4 +5,9 @@
 
 Basketball Event Aggregator using MERN stack
 
-Current project's progress: 15%
+
+
+Current project's progress breakdown:
+
+UI: 5% (Currently a mockup)
+Backend: 16% Simple routing and crud operation(MongoDB)
