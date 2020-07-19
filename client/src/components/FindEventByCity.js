@@ -64,30 +64,36 @@ class FindEventByCity extends Component {
 
                 <form noValidate onSubmit={this.onSubmit}>
                     <div className="row justify-content-center">
-                        <div className='form-group'>
-                            <input
-                                type='text'
-                                placeholder='Enter City'
-                                name='city'
-                                className='form-control'
-                                value={this.state.city}
-                                onChange={this.onChange}
-                            />
+                        <div className="col-md-2">
+                            <div className='form-group'>
+                                <input
+                                    type='text'
+                                    placeholder='Enter City'
+                                    name='city'
+                                    className='form-control'
+                                    value={this.state.city}
+                                    onChange={this.onChange}
+                                />
+                            </div>
                         </div>
                     </div>
                     <br />
                     <div className="row justify-content-center">
-                        <div className='form-group'>
-                            <input
-                                type='submit'
-                                value="Search"
-                            />
+                        <div className="col-md-2">
+                            <div className='form-group'>
+                                <input
+                                    type='submit'
+                                    value="Search"
+                                />
+                            </div>
                         </div>
                     </div>
                     <div className="row justify-content-center">
-                        <Link to="/create-event">
-                            Create an event
+                        <div className="col-md-2">
+                            <Link to="/create-event">
+                                Create an event
                         </Link>
+                        </div>
                     </div>
                 </form>
             </div >

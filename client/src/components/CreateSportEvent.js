@@ -31,7 +31,7 @@ class CreateSportEvent extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container create-event-container">
                 <div className="row justify-content-center">
                     <div className="col-md-6">
                         <br />
@@ -103,6 +103,24 @@ class CreateSportEvent extends Component {
                                 value={this.state.time.end}
                                 onChange={this.onChange}
                             />
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-6 text-center">
+                            <div className='form-group'>
+                                <input
+                                    type='submit'
+                                    value="Create"
+                                />
+                            </div>
+                        </div>
+                        <div className="col-md-6 text-center">
+                            <div className='form-group'>
+                                <input
+                                    type='submit'
+                                    value="Cancel"
+                                />
+                            </div>
                         </div>
                     </div>
                 </form>

@@ -49,3 +49,11 @@
   width: 100px;
   vertical-align: middle;
 }
+
+.create-event-container {
+  width: 500px;
+  border: 1px solid rgba(0,0,.125);
+  margin: 5px Auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
