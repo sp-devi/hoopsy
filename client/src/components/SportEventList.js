@@ -32,7 +32,7 @@ class SportEventList extends Component {
         )
 
         return (
-            <div className="container">
+            <div className="container create-event-container">
                 {eventList}
             </div >
         );
