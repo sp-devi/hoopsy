@@ -12,7 +12,7 @@ const SportEventSchema = new mongoose.Schema({
     eventAddress: {
         type: String,
         required: true
-    }
+    },
 });
 
 module.exports = SportEvent = mongoose.model('sportEvent', SportEventSchema);

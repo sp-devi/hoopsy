@@ -1,4 +1,5 @@
 const { truncate, truncateSync } = require("fs");
+const { Schema } = require("mongoose");
 
 const UserSchema = new mongoose.Schema({
     name: {
@@ -18,7 +19,23 @@ const UserSchema = new mongoose.Schema({
             type: String,
             rquired: true
         }
-    }
+    },
+    eventsToAttend: [{
+        type: Schema.Types.ObjectId,
+        ref: 'sportEvent'
+    }],
+    eventsAttended: [{
+        type: Schema.Types.ObjectId,
+        ref: 'sportEvent'
+    }],
+    eventsToHost: [{
+        type: Schema.Types.ObjectId,
+        ref: 'sportEvent'
+    }],
+    eventsHosted: [{
+        type: Schema.Types.ObjectId,
+        ref: 'sportEvent'
+    }],
 });
 
 module.exports = User = mongoose.model('user', UserSchema);
