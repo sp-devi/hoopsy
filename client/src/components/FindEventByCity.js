@@ -54,48 +54,51 @@ class FindEventByCity extends Component {
         console.log(event);
 
         return (
-            <div className="container create-event-container">
-                <div className="row justify-content-center">
-                    <div className="col-md-6">
+            <header class="masthead text-white text-center">
+                <div class="overlay"></div>
+                <div className="container create-event-container">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6">
+                            <br />
+                            <p className="display-4 text-center">Hoopsy</p>
+                        </div>
+                    </div>
+                    <form noValidate onSubmit={this.onSubmit}>
+                        <div className="row justify-content-center mt-5">
+                            <div className="col-md-auto">
+                                <div className='form-group'>
+                                    <input
+                                        type='text'
+                                        placeholder='Enter City'
+                                        name='city'
+                                        className='form-control'
+                                        value={this.state.city}
+                                        onChange={this.onChange}
+                                    />
+                                </div>
+                            </div>
+                        </div>
                         <br />
-                        <p className="display-4 text-center">Hoopsy</p>
-                    </div>
-                </div>
-                <form noValidate onSubmit={this.onSubmit}>
-                    <div className="row justify-content-center mt-5">
-                        <div className="col-md-auto">
-                            <div className='form-group'>
-                                <input
-                                    type='text'
-                                    placeholder='Enter City'
-                                    name='city'
-                                    className='form-control'
-                                    value={this.state.city}
-                                    onChange={this.onChange}
-                                />
+                        <div className="row justify-content-center">
+                            <div className="col-md-auto">
+                                <div className='form-group'>
+                                    <input
+                                        type='submit'
+                                        value="Search"
+                                    />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <br />
-                    <div className="row justify-content-center">
-                        <div className="col-md-auto">
-                            <div className='form-group'>
-                                <input
-                                    type='submit'
-                                    value="Search"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row justify-content-center">
-                        <div className="col-md-auto">
-                            <Link to="/create-event">
-                                Create an event
+                        <div className="row justify-content-center">
+                            <div className="col-md-auto">
+                                <Link to="/create-event">
+                                    Create an event
                         </Link>
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </div >
+                    </form>
+                </div >
+            </header>
         );
 
     };

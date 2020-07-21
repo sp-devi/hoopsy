@@ -58,3 +58,7 @@
   border-radius: 5px;
   overflow: hidden;
 }
+
+header.masthead {
+  background: url("./img/bg-masthead.jpg") no-repeat center center;
+}
