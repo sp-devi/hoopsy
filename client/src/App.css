@@ -60,5 +60,17 @@
 }
 
 header.masthead {
-  background: url("./img/bg-masthead.jpg") no-repeat center center;
+  position: relative;
+  background: url("./img/bg-masthead-2.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
 }
