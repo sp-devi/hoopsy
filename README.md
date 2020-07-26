@@ -1,5 +1,5 @@
 # Hoopsy
-
+![Hoopsy](https://github.com/sp-devi/hoopsy/blob/master/client/public/hoopsy_logo_1.png)
 
 ![Hoopsy](https://github.com/sp-devi/hoopsy/blob/master/client/public/hoopsy.jpg)
 
