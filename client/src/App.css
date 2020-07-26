@@ -65,6 +65,11 @@ header.masthead {
   background-size: cover;
 }
 
+hoopsy-logo {
+  background: url("./img/hoopsy_logo_1.png") no-repeat center center;
+  background-size: cover;
+}
+
 header.masthead .overlay {
   position: absolute;
   background-color: #212529;

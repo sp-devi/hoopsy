@@ -59,7 +59,10 @@ class FindEventByCity extends Component {
                         <div className="row justify-content-center">
                             <div className="col-md-6">
                                 <br />
-                                <p className="display-4 text-center">Hoopsy</p>
+                                {/* <p className="display-4 text-center hoopsy-logo"></p> */}
+                                <div className="hoopsy-logo">
+
+                                </div>
                             </div>
                         </div>
                         <form noValidate onSubmit={this.onSubmit}>
