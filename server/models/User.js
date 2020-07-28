@@ -36,6 +36,10 @@ const UserSchema = new mongoose.Schema({
         type: Schema.Types.ObjectId,
         ref: 'sportEvent'
     }],
+    eventsCancelled: [{
+        type: Schema.Types.ObjectId,
+        ref: 'sportEvent'
+    }],
 });
 
 module.exports = User = mongoose.model('user', UserSchema);
