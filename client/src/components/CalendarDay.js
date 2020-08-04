@@ -12,7 +12,7 @@ class CalendarDay extends Component {
         return (
             <div>
                 <div>
-                    <p>2</p>
+                    <p>Sun Mon Tue Wed Thu Fri Sat</p>
                 </div>
             </div>
         )
