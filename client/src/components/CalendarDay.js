@@ -13,6 +13,7 @@ class CalendarDay extends Component {
             <div>
                 <div>
                     <p>Sun Mon Tue Wed Thu Fri Sat</p>
+                    <p>01 02 03 04 05 06 07</p>
                 </div>
             </div>
         )
