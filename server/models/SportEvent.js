@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const SportEventSchema = new mongoose.Schema({
-    eventName: {
+    name: {
         type: String,
         required: true
     },
@@ -9,10 +9,24 @@ const SportEventSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    eventAddress: {
+    address: {
         type: String,
         required: true
     },
+    dateTimeInfo : {
+        date : {
+            type: String,
+            required: true
+        },
+        timeStart: {
+            type: String,
+            required: true
+        },
+        timeEnd: {
+            type: String,
+            required: false
+        }
+    }
 });
 
 module.exports = SportEvent = mongoose.model('sportEvent', SportEventSchema);
